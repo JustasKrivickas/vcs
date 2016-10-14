@@ -1,5 +1,7 @@
 package lt.vcs;
 
+import org.omg.DynamicAny.DynSequence;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,8 +32,29 @@ public class Main {
         }
 
         for (String elementas : strMass){
-            System.out.println(elementas);
+            VcsUtils.println(elementas);
+
         }
+
+        for (Dydziai dydis: Dydziai.values()){
+            VcsUtils.println(dydis.toString());
+            VcsUtils.println(dydis.getLt());
+            VcsUtils.println(dydis.getEn());
+
+            switch (dydis){
+                case SMALL:
+                    VcsUtils.println("cha cha");
+                    break;
+                case MEDUIM:
+                    VcsUtils.println("dar paaugsi");
+                    break;
+                case LARGE:
+                    VcsUtils.println("ohoho");
+                    break;
+            }
+
+
+     }
 
         List<String> listas = Arrays.asList(strMass);
 
