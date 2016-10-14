@@ -1,6 +1,11 @@
 package lt.vcs;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+
+
 
 public class Main {
 
@@ -8,25 +13,46 @@ public class Main {
     public static void main(String[] args) {
 
         //-------------------
-        Scanner scan = new Scanner(System.in);
-        System.out.println("ivesk zodi");
-        String zodis =scan.next();
+//        Scanner scan = new Scanner(System.in);
+//        System.out.println("ivesk zodi");
+//        String zodis =scan.next();
+//        int kiekis = 0;
+//        char[] masyvas = zodis.toCharArray();
+        String[] strMass = new String [3];
+        strMass[0]= "nulis";
+        strMass[1]= "vienas";
+        strMass[2]= "du";
+//        String[] mass = {"0","1","2"};
 
-        int kiekis = 0;
-        for(char raide: zodis.toCharArray()) {
-if (raide == 'a'){
-    kiekis++;
 
-}
-
+        for (int i=0; i < strMass.length; i++){
+            strMass[i] = "cia bus "+i;
         }
-        String str2 = zodis.replaceAll("a","z");
+
+        for (String elementas : strMass){
+            System.out.println(elementas);
+        }
+
+        List<String> listas = Arrays.asList(strMass);
 
 
-        System.out.println("zodis: "+ zodis);
-        System.out.println("pakeitem raides is a i z: \""+ str2+ "\"'");
-        System.out.println("a raidziu skaicius: '"+ kiekis);
-        System.out.println("zodzio raidziu skaicius '"+ zodis.length());
+
+
+
+//        for(char raide: zodis.toCharArray()) {
+//            if (raide == 'a'){
+//              kiekis++;
+//
+//}
+
+//        }
+//        String str2 = zodis.replaceAll("a","z");
+//
+
+//        System.out.println("zodis: "+ zodis);
+//        System.out.println("pakeitem raides is a i z: \""+ str2+ "\"'");
+//        System.out.println("a raidziu skaicius: '"+ kiekis);
+//        System.out.println("zodzio raidziu skaicius '"+ zodis.length());
 //        System.out.println("trim() metodo rezultatas: '".concat(str2.trim()).concat( "'"));
 //        String str3 = str2.replaceAll(" ","");
 //        System.out.println("ivestas zodis turi numeri simboliu be tarpo: "+str3.length());
