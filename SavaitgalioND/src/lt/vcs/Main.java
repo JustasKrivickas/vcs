@@ -1,5 +1,12 @@
 package lt.vcs;
 
+import java.awt.image.Raster;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+import static sun.misc.Version.println;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,32 +21,73 @@ public class Main {
         VcsUtils.println("Zaidejas 2, iveskite savo varda");
         String player2 = VcsUtils.inputWord();
 
-        VcsUtils.println("Zaidejas 1, statykite suma");
-        int player1stat = VcsUtils.inputInt();
-        VcsUtils.println("Zaidejas 1 pastatė "+player1stat);
-        VcsUtils.println("Zaidejas 2, jei norite pakelti, iveskit 1, kitu atveju iveskit 0");
-        int player2stat = VcsUtils.inputInt();
 
-        if(player2stat >0){
-            VcsUtils.println("Zaidejas 2 kelia, iveskite pilna suma");
-            int player2kelt = VcsUtils.inputInt();
-            VcsUtils.println("pakelta suma lygi " +player2kelt);
-                    }
-else {
-            VcsUtils.println("Zaidejas 2 lygina");
-            int player2kelt = player1stat;
-            VcsUtils.println("islyginta suma lygi " +player1stat);
-        }
+
+//------------mano rašytas
+
+        int player1stat = 0;
+        int player2stat = 0;
+
+
+        do {
+            VcsUtils.println("Zaidejas 1, statykite ");
+            player1stat = VcsUtils.inputInt();
+            VcsUtils.println("Zaidejas 1 stato " + player1stat);
+            VcsUtils.println("Zaidejas 2, statykite ");
+            player2stat = VcsUtils.inputInt();
+
+            if (player2stat > player1stat) {
+                VcsUtils.println("Zaidejas 2 stato " +player2stat);
+
+
+                if(player2stat==player1stat ){
+return;
+                }
+
+            } else {
+
+                player2stat = player1stat;
+                VcsUtils.println("Islyginta suma lygi " + player2stat);
+            }
+
+        } while (player1stat != player2stat);
 
         VcsUtils.println("metami kauliukai....");
         VcsUtils.println(player1 + " ismete:");
 
 
+        int kaulsk1 = VcsUtils.kaulsk01;
+        int kaulsk2 = VcsUtils.kaulsk02;
+        int kaulsk3 = VcsUtils.kaulsk03;
+        int kaulsk4 = VcsUtils.kaulsk04;
+        int kaulsk5 = VcsUtils.kaulsk05;
+        int kaulsk6 = VcsUtils.kaulsk06;
+
+        int kaulsk7 = VcsUtils.kaulsk07;
+        int kaulsk8 = VcsUtils.kaulsk08;
+        int kaulsk9 = VcsUtils.kaulsk09;
+        int kaulsk100 = VcsUtils.kaulsk10;
+        int kaulsk110 = VcsUtils.kaulsk11;
+        int kaulsk120 = VcsUtils.kaulsk12;
+
+        int kiekis1 = 0;
+//---------------------mano rašytas
+
+        int[] arr1 = {kaulsk1,kaulsk2,kaulsk3,kaulsk4,kaulsk5,kaulsk6};// pavyzdys :)
+        VcsUtils.println(intArrayToString(arr1));//pagalbinio metodo naudojimo pvz, kuri issitrinkit arba uzsikomentuokit :)
 
 
-//        int[] arr = {1,2,3,4,5};// pavyzdys :)
-//        VcsUtils.println(intArrayToString(arr));//pagalbinio metodo naudojimo pvz, kuri issitrinkit arba uzsikomentuokit :)
-//        VcsUtils.println("" + arr[1]);//priminimas kaip galima pasiekti masyvo elementus :)
+        VcsUtils.println(player2 + " ismete:");
+
+        int[] arr2 = {kaulsk7,kaulsk8,kaulsk9,kaulsk100,kaulsk110,kaulsk120};// pavyzdys :)
+        VcsUtils.println(intArrayToString(arr2));//pagalbinio metodo naudojimo pvz, kuri issitrinkit arba uzsikomentuokit :)
+
+
+
+        VcsUtils.println("" + arr1[1]);//priminimas kaip galima pasiekti masyvo elementus :)
+        VcsUtils.println("" + arr2[1]);//priminimas kaip galima pasiekti masyvo elementus :)
+
+
 
         //TODO: jums prireiks jau naudotu metodu is String klases
         //P.S. nepamirskit apziureti klasiu turimu metodu dokumentacijos pagalba (Ctrl+q  arba  View->Quick Documentation)

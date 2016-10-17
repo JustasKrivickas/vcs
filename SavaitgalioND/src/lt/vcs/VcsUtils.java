@@ -3,6 +3,7 @@ package lt.vcs;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Klase skirta pagalbiniams metodams
@@ -47,5 +48,22 @@ public class VcsUtils {
 
 
 
+    public static int kaulsk01 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk02 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk03 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk04 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk05 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk06 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
 
-}
+    public static int kaulsk07 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk08 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk09 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk10 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk11 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+    public static int kaulsk12 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+
+
+    }
+
+
+
