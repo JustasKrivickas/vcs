@@ -45,7 +45,7 @@ public class Main {
                 case SMALL:
                     VcsUtils.println("cha cha");
                     break;
-                case MEDUIM:
+                case MEDIUM:
                     VcsUtils.println("dar paaugsi");
                     break;
                 case LARGE:
