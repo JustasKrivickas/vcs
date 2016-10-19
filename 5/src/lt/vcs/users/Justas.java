@@ -3,6 +3,7 @@ package lt.vcs.users;
 import lt.vcs.Paskaita5.User;
 
 /**
+ * vaikinė klasė
  * Created by KRIVIJ on 2016-10-19.
  */
 public class Justas extends User {

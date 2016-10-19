@@ -6,6 +6,8 @@ import lt.vcs.paketas.PaketoKlase;
 import lt.vcs.users.Justas;
 import lt.vcs.users.neJustas;
 
+import javax.jws.soap.SOAPBinding;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,6 +17,15 @@ public class Main {
         User useris = new User("vardauskas", "pavardauskas");
         User pk = new Justas("tekstas");
         User nejustas = new neJustas("zalia");
+        User ndklase = new Ndklase("prekinisZenklas");
+
+        if(ndklase instanceof Ndklase){
+            VcsUtils.println("Ndklase");
+            Ndklase tikraiNdklase = (Ndklase)ndklase;
+            VcsUtils.println
+                    (tikraiNdklase.getPrz());
+        }
+
 
         if(justas instanceof Justas){
            VcsUtils.println("Justas mldc");
