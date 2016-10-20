@@ -18,7 +18,7 @@ public class Main {
         User useris = new User("vardauskas", "pavardauskas");
         User pk = new Justas("tekstas");
         User nejustas = new neJustas("zalia");
-        User ndklase = new Ndklase("prekinisZenklas");
+        User ndklase = new Ndklase("BIBAN ©®™");
 
         if(ndklase instanceof Ndklase){
             VcsUtils.println("Megstamiausias prekinis zenkas:");
