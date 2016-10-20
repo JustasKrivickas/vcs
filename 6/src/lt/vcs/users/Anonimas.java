@@ -13,7 +13,7 @@ public class Anonimas implements User {
     }
 
     @Override
-    public String getLasName() {
+    public String getLastName() {
         return "Anonimas";
     }
 

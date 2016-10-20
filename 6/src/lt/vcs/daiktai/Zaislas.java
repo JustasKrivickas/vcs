@@ -12,12 +12,8 @@ public class Zaislas extends AbstractDaiktas{
 
         public Zaislas(String name){
             super("Zaislas",new Date());
-        }
 
 
-        @Override
-        public String describe() {
-            return "Visi Tomai - Tomai: " + getName( )+ " " + getpurchaseDate();
         }
     }
 

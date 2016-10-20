@@ -12,7 +12,8 @@ public class Main {
         User tomas1 = new Tomas("pavardė1","Tomas@email1.lt");
         Tomas tomas2 = new Tomas("pavardė2","Tomas@email2.lt");
         AbstractUser tomas3 = new Tomas("pavardė3","Tomas@email3.lt");
-        AbstractDaiktas zaislas = new Zaislas("pliušinis","pimpačkiukas");
+        AbstractDaiktas zaislas = new Zaislas("pliušinis pimpačkiukas");
+        VcsUtils.println(zaislas.getid());
 
         if (tomas1 instanceof AbstractUser) {
             VcsUtils.println("tomas1 yra Abstraktus User'is");
@@ -23,6 +24,12 @@ public class Main {
         if (tomas3 instanceof AbstractUser) {
             VcsUtils.println("tomas3 yra Abstraktus User'is");
         }
+        if (zaislas instanceof AbstractDaiktas) {
+            VcsUtils.println("zaislas yra Abstraktus User'is");
+        }
+
+        String result = VcsUtils.inputWord().split(",")[1];
+        VcsUtils.println(result);
 
 
         if (tomas2 instanceof User){
@@ -37,5 +44,6 @@ public class Main {
         if (tomas1 instanceof Object){
             VcsUtils.println("tomas1 yra Object'as");
         }
+        }
+
     }
-}
