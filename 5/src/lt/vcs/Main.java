@@ -4,6 +4,7 @@ package lt.vcs;
 import lt.vcs.Paskaita5.User;
 import lt.vcs.paketas.PaketoKlase;
 import lt.vcs.users.Justas;
+import lt.vcs.users.Ndklase;
 import lt.vcs.users.neJustas;
 
 import javax.jws.soap.SOAPBinding;
@@ -20,7 +21,7 @@ public class Main {
         User ndklase = new Ndklase("prekinisZenklas");
 
         if(ndklase instanceof Ndklase){
-            VcsUtils.println("Ndklase");
+            VcsUtils.println("Megstamiausias prekinis zenkas:");
             Ndklase tikraiNdklase = (Ndklase)ndklase;
             VcsUtils.println
                     (tikraiNdklase.getPrz());

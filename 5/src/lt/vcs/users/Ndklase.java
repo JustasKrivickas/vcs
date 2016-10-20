@@ -9,12 +9,10 @@ import javax.jws.soap.SOAPBinding;
  */
 public class Ndklase extends User{
 
-
-
         private String Prz;
 
         public Ndklase (String Prz){
-            super("Justas");
+            super("Ndklase");
             this.Prz = Prz;
         }
 
@@ -35,4 +33,4 @@ public class Ndklase extends User{
 
     }
 
-}
+
