@@ -1,5 +1,7 @@
 package lt.vcs;
 
+import java.io.*;
+import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -12,15 +14,18 @@ import static java.awt.SystemColor.text;
  */
 public class VcsUtils {
 
-    private static Scanner scan newScanner();
+    public static final Charset UTF_8 = Charset.forName("UTF-8");
+    public static final String NEW_LINE = System.lineSeparator();
+
 
     private static Scanner newScanner() {
         return new Scanner(System.in);
     }
+
     /**
      * Metodas isveda teksta i nauja eilute cmd lange su laiku priekyje
      */
-    public static void println(String text); {
+    public static void println(String text) {
         Date data = new Date();
         String formatas = "'['HH:mm:ss:SSS']' ";
         SimpleDateFormat sdf = new SimpleDateFormat(formatas);
@@ -29,6 +34,7 @@ public class VcsUtils {
 
     /**
      * perskaito zodi ivesta per cmd
+     *
      * @return perskaityta zodi
      */
     public static String inputWord() {
@@ -37,38 +43,49 @@ public class VcsUtils {
 
     /**
      * perskaito eilute ivesta per cmd
+     *
      * @return perskaityta eilute
      */
     public static String inputLine() {
         return newScanner().next();
     }
-
     /**
      * perskaito integeri(sveika skaiciu) ivesta per cmd
      * @return perskaityta integeri
      */
     public static int inputInt() {
-        return newScanner().nextLine();
+        return newScanner().nextInt();
+    }
+
+    /**
+     * Metodas failo readeriui gauti
+     * @param file
+     * @return
+     * @throws IOException
+     */
+    public static BufferedReader newReader(String file) throws IOException {
+        FileInputStream fis = new FileInputStream(file);
+        InputStreamReader isr = new InputStreamReader(fis, VcsUtils.UTF_8);
+        return new BufferedReader(isr);
+    }
+    /**
+     * Metodas failo writeriui gauti
+     * @param file
+     * @return
+     * @throws IOException
+     */
+
+
+    public static BufferedWriter newWriter(String file) throws IOException {
+        FileOutputStream fos = new FileOutputStream(file);
+        OutputStreamWriter osw = new OutputStreamWriter(fos, VcsUtils.UTF_8);
+        return new BufferedWriter(osw);
     }
 
 
-
-    public static int kaulsk01 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk02 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk03 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk04 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk05 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk06 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-
-    public static int kaulsk07 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk08 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk09 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk10 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk11 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
-    public static int kaulsk12 = ThreadLocalRandom.current().nextInt(1, 1 + 6);
+   }
 
 
-    }
 
 
 

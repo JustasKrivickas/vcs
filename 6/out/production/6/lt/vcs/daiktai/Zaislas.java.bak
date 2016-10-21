@@ -11,7 +11,7 @@ public class Zaislas extends AbstractDaiktas{
 
 
         public Zaislas(String name){
-            super(name,new Date());
+            super("Zaislas",new Date());
 
 
         }

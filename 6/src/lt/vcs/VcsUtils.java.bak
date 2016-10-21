@@ -5,22 +5,17 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static java.awt.SystemColor.text;
-
 /**
  * Klase skirta pagalbiniams metodams
  */
 public class VcsUtils {
 
-    private static Scanner scan newScanner();
+    private static Scanner scan = new Scanner(System.in);
 
-    private static Scanner newScanner() {
-        return new Scanner(System.in);
-    }
     /**
      * Metodas isveda teksta i nauja eilute cmd lange su laiku priekyje
      */
-    public static void println(String text); {
+    public static void println(String text) {
         Date data = new Date();
         String formatas = "'['HH:mm:ss:SSS']' ";
         SimpleDateFormat sdf = new SimpleDateFormat(formatas);
@@ -32,7 +27,7 @@ public class VcsUtils {
      * @return perskaityta zodi
      */
     public static String inputWord() {
-        return newScanner().next();
+        return scan.next();
     }
 
     /**
@@ -40,7 +35,7 @@ public class VcsUtils {
      * @return perskaityta eilute
      */
     public static String inputLine() {
-        return newScanner().next();
+        return scan.nextLine();
     }
 
     /**
@@ -48,7 +43,7 @@ public class VcsUtils {
      * @return perskaityta integeri
      */
     public static int inputInt() {
-        return newScanner().nextLine();
+        return scan.nextInt();
     }
 
 

@@ -28,9 +28,9 @@ public abstract class AbstractUser implements User , VcsEntity {
         return  lastName;
     }
     public String getEmail(){
-        return  email();
+        return  getEmail();
     }
-    public String getid(){return  email;}
+    public String getid(){return  getEmail();}
 
 
     /**

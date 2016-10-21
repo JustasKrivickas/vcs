@@ -21,20 +21,17 @@ public abstract class AbstractDaiktas implements Daiktas, VcsEntity {
         this.purcaheDate = purcaheDate;
     }
 
-@Override
     public String getName() {
         return (name);
     }
 
-    @Override
     public Date getpurchaseDate() {
-        return purcaheDate;
+        return (purcaheDate);
     }
-
 
     public String getid() {
 
         SimpleDateFormat sdf = new SimpleDateFormat("['ss']''['mm'][]'HH']'");
-return name + "-" + spf.format(purchaseDate);
+return name + "-" +sdf.format(purcaheDate);
     }
 }
