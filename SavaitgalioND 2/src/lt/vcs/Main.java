@@ -43,16 +43,14 @@ public class Main {
                     VcsUtils.println("Zaidejas 2 stato " + player2stat);
 
 
-                    if (player2stat == player1stat) {
-                        return;
+//                    if (player2stat == player1stat) {
+//                        return;
                     }
-
-                } else {
+                else {
 
                     player2stat = player1stat;
                     VcsUtils.println("Islyginta suma lygi " + player2stat);
                 }
-
 
         }
         while (player1stat != player2stat);
@@ -74,7 +72,6 @@ public class Main {
         int kaulsk110 = VcsUtils.kaulsk11;
         int kaulsk120 = VcsUtils.kaulsk12;
 
-        int kiekis1 = 0;
 
 
         int[] arr1 = {kaulsk1,kaulsk2,kaulsk3,kaulsk4,kaulsk5,kaulsk6};
@@ -85,6 +82,8 @@ public class Main {
 
         int[] arr2 = {kaulsk7,kaulsk8,kaulsk9,kaulsk100,kaulsk110,kaulsk120};
         VcsUtils.println(intArrayToString(arr2));
+
+
 
 
 //---------------------mano rašytas
